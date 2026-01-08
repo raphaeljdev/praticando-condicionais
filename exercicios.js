@@ -22,3 +22,25 @@ const calcula = (operador) => {
 };
 
 console.log(calcula(subtrai));
+
+// localizar o nivel de bônus de acordo com a faixa salarial
+// ex: $11000 e acima: 3% de bônus
+// $10999 a $7000: 5% de bônus
+// $ 6999 a $4008: 7% de bônus
+// $3999 p baixo: 9% de bônus
+
+const salario = 7000;
+
+const salarioBonus = () => {
+  if (salario >= 11000) {
+    console.log(`Bonus referente ao salario (${salario}): ${salario * 0.03}`);
+  } else if (salario < 11000 && salario >= 7000) {
+    console.log(`Bonus referente ao salario (${salario}): ${salario * 0.05}`);
+  } else if (salario < 7000 && salario >= 4008) {
+    console.log(`Bonus referente ao salario (${salario}): ${salario * 0.07}`);
+  } else if (salario < 4000) {
+    console.log(`Bonus referente ao salario (${salario}): ${salario * 0.09}`);
+  }
+};
+
+salarioBonus();
