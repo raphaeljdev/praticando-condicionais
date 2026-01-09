@@ -26,10 +26,20 @@ const diasDaSemana = {
 
 const { domingo, segunda, terca, quarta, quinta, sexta, sabado } = diasDaSemana;
 
-const horarioFuncionamento = () => {
-  if (domingo || sabado) {
-    console.log('oi');
-  }
-};
+let escolhaUsuario = segunda;
 
-horarioFuncionamento(segunda);
+switch (escolhaUsuario) {
+  case segunda:
+  case terca:
+  case quarta:
+  case quinta:
+  case sexta:
+    console.log('Aberto das 9h as 18h.');
+    break;
+  case sabado:
+  case domingo:
+    console.log('Aberto das 10h as 14h.');
+    break;
+  default:
+    console.log('Dia invalido');
+}
